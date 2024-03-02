@@ -87,8 +87,8 @@ class ProductDetailsFragment : Fragment() {
                         binding.btnAddToCart.startAnimation()
                     }
                     is Resource.Success->{
-                        binding.btnAddToCart.stopAnimation()
-//                        binding.btnAddToCart.setBackgroundColor(resources.getColor(R.color.black))
+                        binding.btnAddToCart.revertAnimation()
+                        binding.btnAddToCart.setBackgroundColor(resources.getColor(R.color.black))
                         Toast.makeText(requireContext(),"Product added to cart",Toast.LENGTH_SHORT).show()
                     }
                     is Resource.Error->{
