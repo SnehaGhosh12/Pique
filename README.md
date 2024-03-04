@@ -5,21 +5,24 @@ Pique is an electronic gadget shopping app with a wide range of categories. It e
 <p>
 <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/5c360856-fe56-4306-83dc-432bb345d910" width="300" /> 
 <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/6c3c42cf-28b5-4203-b7de-e3b6be07317e" width="300" /> 
-<img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/0eb91fb2-dd31-4bf0-8ed7-e047c5728658" width="300" /> 
 </p>
 <p>
+  <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/0eb91fb2-dd31-4bf0-8ed7-e047c5728658" width="300" /> 
 <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/7c99847d-e2ce-49b1-8e2f-80f1b9025ad7" width="300" /> 
-<img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/e17fed02-87d9-4039-b3c9-d63630509741" width="300" />
-<img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/3721d517-8ce7-42fa-b4e8-4dcab68a4adf" width="300" />
-
+</p>
+<p>
+ <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/e17fed02-87d9-4039-b3c9-d63630509741" width="300" />
+ <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/3721d517-8ce7-42fa-b4e8-4dcab68a4adf" width="300" />
 </p>
 <p>
 <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/95e5da95-05fa-4401-b83c-bb9a9db34295" width="300" /> 
 <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/17022134-c14a-433b-b235-fe5438428b2d" width="300" /> 
-<img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/58f201dd-f441-4f26-80f2-45fbc4860749" width="300" /> 
 </p>
 <p>
-<img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/cb03561a-3b0e-43ea-9d30-a070276d7057" width="300" /> 
+ <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/58f201dd-f441-4f26-80f2-45fbc4860749" width="300" /> 
+<img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/cb03561a-3b0e-43ea-9d30-a070276d7057" width="300" />  
+</p>
+<p>
 <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/1b09d87a-8c29-4f15-bfba-84132b30212c" width="300" /> 
 <img src="https://github.com/SnehaGhosh12/Pique/assets/85940732/60749867-a583-448b-8f36-dfbf739eaac5" width="300" /> 
 </p>
