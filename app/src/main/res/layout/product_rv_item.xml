@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="180dp"
     android:layout_height="wrap_content"
     android:background="@color/g_card_background"
     app:elevation="0dp"
+    app:cardElevation="2dp"
     android:layout_margin="10dp"
 
     >
@@ -15,12 +16,15 @@
 
         <ImageView
             android:id="@+id/img_product"
-            android:layout_width="114dp"
-            android:layout_height="108dp"
+            android:layout_width="155dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:scaleType="fitCenter"/>
+            android:scaleType="centerCrop"
+            android:src="@color/g_dark_blue"/>
 
         <LinearLayout
             android:id="@+id/linear_product_name"
@@ -87,4 +91,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>

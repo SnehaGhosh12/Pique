@@ -21,13 +21,13 @@ class BestProductsAdapter :RecyclerView.Adapter<BestProductsAdapter.BestProducts
                 Picasso.get().load(products.images[0]).into(imgProduct)
                 products.offerPercentage?.let {
                     val priceAfterOffer = products.offerPercentage.getProductPrice(products.price)
-                    tvNewPrice.text= "$ ${String.format("%.2f",priceAfterOffer)}"
+                    tvNewPrice.text= "₹ ${String.format("%.2f",priceAfterOffer)}"
 
                     tvPrice.paintFlags= tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
                 }
                 if (products.offerPercentage == null)
                     tvNewPrice.visibility = View.INVISIBLE
-                tvPrice.text= "$ ${products.price}"
+                tvPrice.text= "₹ ${products.price}"
                 tvName.text = products.name
             }
         }

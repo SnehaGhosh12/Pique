@@ -51,7 +51,7 @@ class CartFragment : Fragment() {
             viewModel.productsPrice.collectLatest {price->
                 price?.let {
                     totalPrice = it as Float
-                    binding.tvTotalPrice.text = "$ $price"
+                    binding.tvTotalPrice.text = "₹ $price"
                 }
             }
         }

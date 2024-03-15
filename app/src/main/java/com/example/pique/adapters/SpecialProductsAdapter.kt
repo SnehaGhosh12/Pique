@@ -19,7 +19,7 @@ class SpecialProductsAdapter: RecyclerView.Adapter<SpecialProductsAdapter.Specia
 //                Glide.with(itemView).load(products.images[0]).into(imgSpecialRvItem)
                 Picasso.get().load(products.images[0]).into(imgSpecialRvItem)
                 tvSpecialProductName.text = products.name
-                tvSpecialProductPrice.text = products.price.toString()
+                tvSpecialProductPrice.text = "₹ ${products.price}"
             }
         }
     }

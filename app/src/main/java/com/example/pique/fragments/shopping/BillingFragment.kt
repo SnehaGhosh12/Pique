@@ -1,11 +1,13 @@
 package com.example.pique.fragments.shopping
 
-import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -14,6 +16,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pique.R
+import com.example.pique.activities.PaymentActivity
 import com.example.pique.adapters.AddressAdapter
 import com.example.pique.adapters.BillingProductsAdapter
 import com.example.pique.data.Address
@@ -26,8 +29,13 @@ import com.example.pique.util.Resource
 import com.example.pique.viewmodel.BillingViewModel
 import com.example.pique.viewmodel.OrderViewModel
 import com.google.android.material.snackbar.Snackbar
+import com.razorpay.Checkout
+import com.razorpay.PaymentData
+import com.razorpay.PaymentResultWithDataListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
+import java.io.Serializable
+
 
 @AndroidEntryPoint
 class BillingFragment: Fragment() {
@@ -46,6 +54,7 @@ class BillingFragment: Fragment() {
         super.onCreate(savedInstanceState)
         products = args.products.toList()
         totalPrice = args.totalPrice
+
     }
 
 
@@ -109,8 +118,9 @@ class BillingFragment: Fragment() {
                 }
             }
         }
+
         billingAdapter.differ.submitList(products)
-        binding.tvTotalPrice.text = "$ ${totalPrice.toFloat()}"
+        binding.tvTotalPrice.text = "₹ ${totalPrice.toFloat()}"
         addressAdapter.onClick= {
             selectedAddress = it
         }
@@ -136,13 +146,25 @@ class BillingFragment: Fragment() {
                     totalPrice,
                     products,
                     selectedAddress!!)
-                orderViewModel.placeOrder(order)
+//                orderViewModel.placeOrder(order)
+                val price = totalPrice.toString()
+                val orderid = order.orderId.toString()
+
+                val intent = Intent(activity,PaymentActivity::class.java)
+
+                intent.putExtra("totalcost",price)
+//                intent.putExtra("orderid",orderid)
+                intent.putExtra("order",order)
+
+                startActivity(intent)
                 dialog.dismiss()
+
             }
         }
         alertDialog.create()
         alertDialog.show()
     }
+
 
     private fun setUpAdressRv() {
         binding.rvAddress.apply {
@@ -159,4 +181,6 @@ class BillingFragment: Fragment() {
             addItemDecoration(HorizontalItemDecoration())
         }
     }
+
+
 }

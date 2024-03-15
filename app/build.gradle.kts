@@ -80,7 +80,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
-    //Dagger hilt
+//    Dagger hilt
 //    implementation ("com.google.dagger:hilt-android:2.48")
 //    kapt ("com.google.dagger:hilt-compiler:2.48")
 
@@ -94,6 +94,8 @@ dependencies {
     implementation("com.squareup.picasso:picasso:2.8")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
+
+    implementation("com.razorpay:checkout:1.6.33")
 
 
 }

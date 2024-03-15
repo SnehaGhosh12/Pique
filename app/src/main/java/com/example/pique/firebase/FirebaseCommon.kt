@@ -1,18 +1,21 @@
 package com.example.pique.firebase
 
 import com.example.pique.data.CartProduct
+import com.example.pique.data.Products
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.firestore
 import com.google.firebase.firestore.toObject
 import java.lang.Exception
 
 class FirebaseCommon(
     private val firestore: FirebaseFirestore,
-    private val auth: FirebaseAuth
+    private val auth: FirebaseAuth,
 ) {
     private val cartCollection = firestore.collection("user").document(auth.uid!!).collection("cart")
-
+//    private val productsCollection = Firebase.firestore.collection("products")
     fun addProductToCart(cartProduct: CartProduct, onResult:(CartProduct?, Exception?) -> Unit){
         cartCollection.document().set(cartProduct)
             .addOnSuccessListener {
@@ -57,6 +60,7 @@ class FirebaseCommon(
             onResult(null,it)
         }
     }
+
 
     enum class QuantityChanging{
         INCREASE,DECREASE

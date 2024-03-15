@@ -22,7 +22,7 @@ class BestDealsAdapter:RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHolder
                     val remainingPricePercentage = 1f - it
                     val priceAfterOffer =(remainingPricePercentage * products.price)
 
-                    tvNewPrice.text= "$ ${String.format("%.2f",priceAfterOffer)}"
+                    tvNewPrice.text= "₹ ${String.format("%.2f",priceAfterOffer)}"
                     tvOldPrice.paintFlags= Paint.STRIKE_THRU_TEXT_FLAG
                 }
                 if(products.offerPercentage==null){
@@ -30,7 +30,7 @@ class BestDealsAdapter:RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHolder
                 }
 
 
-                tvOldPrice.text= "$ ${products.price}"
+                tvOldPrice.text= "₹ ${products.price}"
                 tvDealProductName.text = products.name
             }
         }

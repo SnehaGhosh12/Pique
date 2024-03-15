@@ -13,7 +13,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardImgProduct"
             android:layout_width="0dp"
-            android:layout_height="350dp"
+            android:layout_height="380dp"
             android:layout_marginTop="20dp"
             app:cardCornerRadius="15dp"
             app:layout_constraintStart_toStartOf="parent"
